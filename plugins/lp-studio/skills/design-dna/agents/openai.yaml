@@ -1,0 +1,7 @@
+interface:
+  display_name: "Design DNA"
+  short_description: "Generate service-specific LP design DNA"
+  default_prompt: "Use $design-dna to infer, score, and specify the best landing page design DNA for this service."
+
+policy:
+  allow_implicit_invocation: true
