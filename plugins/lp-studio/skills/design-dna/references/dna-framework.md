@@ -38,6 +38,7 @@ Best for products where seeing or imagining the workflow sells better than claim
 - Typography: confident sans for UI, optional editorial font only when it creates a clear brand voice or slows the visitor down at the promise line. The DNA should define exact display/body/label scale and why the demo needs that contrast.
 - Layout: large central interaction, minimal sides, progress states below.
 - Spacing: focus space around the interaction so the visitor understands one product action before reading proof.
+- Motion: the demo is the motion. Typed prompt playback, caret blink, and state progression inside the interaction, plus one staggered hero reveal that lands on the composer. Everything around the demo stays still so the interaction reads as alive.
 - Avoid: side dashboards that make the product feel passive.
 - Creative move: make the product input feel like the page's main typographic object. Use scale, cursor states, prompt text, and generated labels as part of the visual identity.
 
@@ -50,6 +51,7 @@ Best for B2B products with operational or security stakes.
 - Typography: precise sans plus mono labels when operational credibility matters. Type scale should preserve scannability under density.
 - Layout: panels, tables, timelines, system maps.
 - Spacing: comparison space between panels and enough row height to make the surface trustworthy rather than cramped.
+- Motion: precision physics. Quick deliberate transitions, data that settles into place, count-up numerals on first view, no bounce or playfulness.
 - Avoid: playful colors, vague claims, invented metrics.
 - Creative move: use precision as drama. Large tabular numerals, strict mono labels, rule lines, and dense-but-legible hierarchy can feel more distinctive than decorative imagery.
 
@@ -62,6 +64,7 @@ Best for creative tools, premium SaaS, and products where taste is the different
 - Typography: high-quality display face paired with disciplined sans. Italic is allowed only for a deliberate editorial accent such as a quote, aside, or contrast line; it should not be decorative filler.
 - Layout: asymmetry, whitespace, rules, art-directed fragments.
 - Spacing: intentional pause space and strong alignment rules; whitespace should frame authorship, not hide missing content.
+- Motion: editorial pacing. Slow staggered text reveals on scroll, images that ease in with a slight scale settle, generous reveal thresholds that make scrolling feel like turning pages.
 - Avoid: template-like feature grids.
 - Creative move: let typography carry authorship. Consider a high-contrast display serif, italic aside, cropped display word, oversized pull quote, or asymmetric text block that would be memorable without extra decoration.
 
@@ -74,6 +77,7 @@ Best for devtools, SDKs, APIs, and infra.
 - Typography: grotesk plus mono with an explicit role split: persuasive claims in grotesk, exact commands/labels/data in mono.
 - Layout: strict grid, labels, code/data artifacts.
 - Spacing: tight but deliberate grid spacing that supports comparison and code reading.
+- Motion: terminal energy. Instant state changes, typed text, blinking cursors, mono tickers; transitions snap rather than ease.
 - Avoid: marketing fluff or excessive lifestyle visuals.
 - Creative move: turn structure into brand. Index marks, command syntax, dense labels, keyboard-like controls, or code/data typography can become the signature.
 
@@ -86,6 +90,7 @@ Best when 3D, simulation, visualization, hardware, or generated scenes are centr
 - Typography: restrained technical sans sized to avoid competing with the scene. Labels should annotate, not decorate.
 - Layout: full-bleed scene, annotation layer, simple state strip.
 - Spacing: scene-first composition with text held to edges or quiet bands.
+- Motion: the scene is the engine. Slow camera drift or restrained parallax in the hero scene, scroll-linked scene states, annotations that fade in as the scene settles; UI chrome stays quiet.
 - Avoid: decorative 3D that does not explain product value.
 - Creative move: make type behave like an annotation layer in space: edge labels, measured callouts, quiet overlays, and one strong scene title.
 
@@ -98,6 +103,7 @@ Best for high-ticket or premium consumer/professional products.
 - Typography: elegant display plus quiet sans, with exact size/weight choices that create scarcity and confidence rather than emptiness.
 - Layout: negative space, slow reveal, low density.
 - Spacing: luxury pause space; each gap must protect a product object, price signal, or decision moment.
+- Motion: scarcity of movement. One slow confident reveal per viewport, long durations with soft easing, hover states that barely whisper; nothing competes with the product object.
 - Avoid: SaaS dashboards and crowded claims.
 - Creative move: use extreme scale contrast and silence. One exquisitely set line, a restrained italic, or a precise product name can carry the page.
 
@@ -110,6 +116,7 @@ Best for low-risk consumer products or community products.
 - Typography: friendly sans, expressive but legible, with larger touch-friendly controls and no fragile decorative italics.
 - Layout: clear path, color-coded states, direct benefit.
 - Spacing: quick-scan spacing; the visitor should not need to decode a complex composition.
+- Motion: springy and immediate. Bouncy micro-interactions, playful hover states, quick joyful reveals; keep durations short so the page feels fast, not cute.
 - Avoid: enterprise density and over-serious tone.
 - Creative move: use friendly expressive type, irregular rhythm, or warm microcopy while keeping CTAs obvious and touch-friendly.
 
@@ -127,6 +134,43 @@ Use these to avoid default-safe typography. Pick only what fits the service.
 - **Wordmark behavior**: if no logo exists, the name's letter spacing, weight, case, or script relationship can become a brand asset.
 - **Numeral treatment**: tabular, oversized, or circled numerals can create sequence and credibility in workflows.
 - **Variable weight/width**: use width or weight changes for state, emphasis, or responsive behavior when implementation can support it.
+
+## Motion Levers
+
+Motion is a design material with the same rules as typography: every cue needs a job, and one signature motion idea beats five decorative ones. Pick only what fits the service.
+
+- **Hero entrance choreography**: a one-time staggered reveal that builds the first viewport in reading order — headline, then demo surface, then supporting chrome. Use it to establish hierarchy in the first second; keep the whole sequence under roughly 1.2s.
+- **Demo-as-motion**: typed prompts, caret blinks, state progressions, streaming output, and cursor walkthroughs inside the product surface. The strongest motion for SaaS because it is also product evidence.
+- **Scroll-triggered reveals**: sections that fade and rise into place as they enter the viewport, with staggered children. This is pacing, not decoration — reveals should group content the way the section intent groups evidence.
+- **Type in motion**: split-text line reveals, weight or width transitions on hover, cropped display lines that slide into their crop. Use only when type is the signature.
+- **Sticky transformation**: a pinned section whose content transforms across a scroll range — workflow walkthroughs, before/after states. High narrative power, high implementation cost; spend it on the one story that matters.
+- **Parallax and depth**: subtle background/foreground speed separation. Easy to overuse; keep offsets small and never parallax body text.
+- **Hover physics**: lift, tilt, magnetic pull, underline draws, image zooms. Micro-interactions that reward exploration and prove the page is alive.
+- **Count-up numerals**: tabular numbers that count to their value on first view. Use only for real metrics.
+- **Marquee/ticker**: continuous horizontal motion for logos, examples, or index items. Pause on hover; never use it for body copy.
+- **Ambient material motion**: grain shimmer, slow gradient drift, floating particles. The riskiest lever — only when the brand's material is itself the signature.
+
+Restraint rules:
+
+- Every motion cue must pass the deletion test: if removing it does not weaken comprehension, hierarchy, evidence, or memorability, remove it.
+- Micro-interactions run about 150-300ms; section reveals about 400-800ms; anything longer must be a deliberate signature moment.
+- Use custom ease-out style easing curves rather than linear or browser-default ease; springs belong only in playful DNAs.
+- Animate transform and opacity only. Never animate layout properties, never scroll-jack, never autoplay motion that blocks reading.
+- Always define the `prefers-reduced-motion` fallback: content appears without large movement and demo states still communicate.
+
+## Style Distance Test
+
+Inside LP Studio, the three candidate DNAs must read as three different design worlds, not three settings of one theme. Check the set, not only each candidate:
+
+- Different archetypes, or at minimum radically different interpretations of one archetype.
+- Different palette families: vary light/dark, temperature, and saturation across the set — for example one light editorial, one dark technical, one saturated or unexpected.
+- Different typographic signatures: the display faces should come from different classifications (serif, grotesk, mono, condensed), not three similar sans-serifs.
+- Different composition systems: for example one centered single column, one asymmetric editorial layout, one strict index grid.
+- Different motion concepts: each candidate names its own motion personality.
+
+Thumbnail test: shrink all three first viewports to thumbnails. If a stranger could group any two as the same brand, the set fails — push them apart.
+
+What must stay constant across all three: the brief's truth, the actual product interaction surface, real-proof-versus-placeholder rules, and every explicit user constraint. Style diverges; honesty and the demo surface do not.
 
 ## Creative Range Scoring
 
@@ -179,7 +223,7 @@ Use these definitions when producing a final spec:
 - **component_language**: Buttons, inputs, cards, panels, badges, forms, and radius.
 - **imagery_and_3d**: What visuals should show, what they must not become.
 - **visual_evidence_rules**: How features are explained with screenshots, demos, generated examples, comparisons, workflow diagrams, product photos, previews, or before/after objects instead of text-plus-icon-only sections.
-- **motion**: Motion purpose and restraint level.
+- **motion**: The motion system: named concept, hero entrance choreography, scroll behavior, micro-interactions, one signature moment, reduced-motion fallback, and performance rules.
 - **cta_behavior**: Placement, hierarchy, and wording.
 - **proof_strategy**: What proof to use now; placeholders if proof is absent.
 - **avoid**: Specific anti-patterns for this service.
@@ -239,7 +283,14 @@ design_dna:
   component_language: "16px surfaces, 8px controls, precise input affordances, quiet waitlist button."
   imagery_and_3d: "3D can appear after the first interaction or below the fold; it must not compete with the chat."
   visual_evidence_rules: "Feature explanations use chat states, generated page previews, and output examples. Icon-only feature rows are not used as standalone sections."
-  motion: "Subtle composer focus, typed prompt, state progression."
+  motion:
+    concept: "The composer is alive; the page around it stays calm."
+    hero_entrance: "Headline settles first, then the composer rises into place and the caret starts blinking; whole sequence under 1s."
+    scroll_behavior: "Sections fade-rise on entry with short stagger between children; output examples reveal in reading order."
+    micro_interactions: "Composer focus ring, button lift on hover, prompt chips that press down on click."
+    signature_moment: "A prompt types itself in the composer and the generated LP plan streams in while the visitor watches."
+    reduced_motion: "All movement collapses to opacity fades; the typed-prompt demo renders as a completed state."
+    performance_rules: "Transform/opacity only; no scroll-jacking; demo playback starts only when the hero is in view."
   cta_behavior: "The primary CTA remains visible in nav or below demo without interrupting the product surface."
   proof_strategy: "Use demo states instead of fake customer proof."
   avoid:

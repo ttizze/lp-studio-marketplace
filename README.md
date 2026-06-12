@@ -5,10 +5,10 @@ This repository publishes the `lp-studio` Codex plugin through a Codex marketpla
 LP Studio is a standalone landing-page workflow:
 
 1. Create or refine a landing-page brief.
-2. Generate service-specific design DNA.
-3. Generate exactly three image-led visual directions.
-4. Wait for the user to pick one direction.
-5. Build from the selected visual target and verify the result.
+2. Generate three style-divergent design DNA candidates, each with its own motion system.
+3. Generate exactly three image-led visual directions — one per candidate, three completely different style worlds.
+4. Wait for the user to pick one direction; the pick also selects its DNA.
+5. Build from the selected visual target — including its motion system — and verify the result.
 
 The plugin does not depend on or modify the Product Design plugin.
 
@@ -36,7 +36,7 @@ In Codex, mention the plugin and ask for a landing page workflow:
 [@lp-studio](plugin://lp-studio@lp-studio) Create an LP for my AI SaaS.
 ```
 
-LP Studio should first produce a brief, then design DNA, then exactly three visual directions. It should not build until you choose one direction.
+LP Studio should first produce a brief, then three candidate design DNAs, then exactly three visual directions in completely different styles. It should not build until you choose one direction.
 
 ## Contents
 

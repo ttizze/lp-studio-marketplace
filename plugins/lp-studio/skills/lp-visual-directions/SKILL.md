@@ -1,6 +1,6 @@
 ---
 name: lp-visual-directions
-description: Generate exactly three image-based landing-page visual directions after LP brief onboarding and design DNA are complete. Use when the user has a landing-page brief plus design DNA and wants visual concepts, generated images, options, directions, or a pick-one flow before implementation.
+description: Generate exactly three image-based landing-page visual directions in completely different styles after LP brief onboarding and design DNA candidates are complete. Use when the user has a landing-page brief plus design DNA and wants visual concepts, generated images, options, directions, or a pick-one flow before implementation.
 ---
 
 # LP Visual Directions
@@ -11,7 +11,7 @@ Generate landing-page visual directions from `landing-page-brief.md` plus `desig
 
 Do not start if the LP brief is missing the offer, audience, industry, conversion goal, available assets, and industry expectations. Route back to [$lp-brief-onboarding](../lp-brief-onboarding/SKILL.md) first.
 
-Do not start if design DNA is missing or not selected. Route to [$design-dna](../design-dna/SKILL.md) first.
+Do not start if design DNA is missing. The LP Studio default input is three style-divergent candidate DNAs from [$design-dna](../design-dna/SKILL.md); route there first when they do not exist.
 
 Do not build during this step. The output is three visual options and a request for the user to choose one.
 
@@ -20,7 +20,7 @@ Do not build during this step. The output is three visual options and a request 
 Before image generation:
 
 1. Read the brief.
-2. Read `design-dna.md` or the equivalent selected design DNA.
+2. Read `design-dna.md` or the equivalent confirmed design DNA candidates.
 3. Identify the actual product interaction surface the LP must demo: chat, editor, playground, dashboard, upload flow, API console, mobile app, checkout, or another primary user-touch point.
 4. Inspect any referenced local screenshots, product images, logos, Figma exports, PDFs, or existing site captures that are available.
 5. Inspect any reference examples that are available and extract only reusable mechanics, not source brand copy.
@@ -32,13 +32,19 @@ If a named asset cannot be accessed, say so and ask whether to continue without 
 
 ## Three Options
 
-Generate exactly three independent image options unless the user explicitly requests a different count. Each option should differ in structure and strategy, not just color.
+Generate exactly three independent image options unless the user explicitly requests a different count. The three options are three completely different style worlds, not three variants of one design: different typography, palette, composition system, mood, and motion concept. The difference must be obvious from a thumbnail of the first viewport.
 
-All three options must respect the selected design DNA. The options can explore different first-viewport compositions, section order, proof placement, or image strategy, but they must not violate the DNA's typography, palette, component language, proof strategy, or avoid list unless the user explicitly asks to remix the DNA.
+By default, each option embodies one of the three candidate DNAs from design-dna — one option per candidate. Within its candidate, an option must not violate that candidate's typography, palette, component language, proof strategy, or avoid list. If the user has already locked a single DNA, say so, keep all three options inside it, and maximize structural and compositional range instead.
 
-The visual options must preserve the DNA's rationale, not only its surface style. If the DNA says why a font, size, italic rule, whitespace rhythm, section, or visual object exists, each option must make that intention visible. Do not add decorative elements, extra cards, badges, dividers, or gaps unless they pass the DNA's element job/deletion test.
+The visual options must preserve their candidate DNA's rationale, not only its surface style. If the DNA says why a font, size, italic rule, whitespace rhythm, section, motion cue, or visual object exists, the option must make that intention visible. Do not add decorative elements, extra cards, badges, dividers, or gaps unless they pass the DNA's element job/deletion test.
 
-The options must also test the DNA's creative range. Do not make three safe variants. Unless the brief or user demands restraint, include at least one type-led option where typography is the main visual engine, one product/evidence-led option, and one composition/brand-system-led option. The differences should be visible from the first viewport.
+Do not make three safe variants. Unless the brief or user demands restraint, the set should include at least one type-led option where typography is the main visual engine, one product/evidence-led option, and one composition/brand-system-led option. The differences should be visible from the first viewport.
+
+What stays constant across all three: the brief's offer and audience, the actual product interaction surface, real-versus-placeholder proof rules, and every explicit user constraint. Style diverges completely; honesty, the demo surface, and the user's negative constraints do not.
+
+Every option carries a motion concept inherited from its candidate DNA. The generated image is static, so carry motion in the presentation: when describing each option, narrate its hero entrance, scroll behavior, and signature motion moment so the user can compare how the three pages would feel in motion, not only how they look.
+
+The craft bar is an award-level art-directed page, not a clean template. Each image should show deliberate lighting and color grading, real texture and material decisions, layered depth, and refined component detail. If an option looks like a default component library with content poured in, regenerate it.
 
 Use these default lenses:
 
@@ -92,8 +98,9 @@ Every prompt must include:
 - for SaaS, the actual product demo surface and core workflow
 - for SaaS, the hero interaction that will be operable in the built LP
 - reference examples or the explicit reference gap
-- selected design DNA constraints
-- creative range and signature move from the design DNA
+- the candidate DNA this option embodies, with its constraints
+- creative range and signature move from that candidate DNA
+- art-direction craft cues: lighting, color grading, texture and material, depth
 - typography rationale, type scale, and italic policy from the design DNA
 - typographic signature, including font pairing, scale contrast, and expressive/restrained type moves
 - spacing and composition rationale from the design DNA
@@ -131,13 +138,16 @@ Interaction semantics:
 Reference examples or gaps:
 Surrounding page system:
 Feature explanation visuals:
-Design DNA constraints:
+Candidate design DNA and constraints:
+Art direction craft (lighting, grading, texture, depth):
 Assets to use or respect:
 Must not fake:
 
 Make it feel like a real landing page for this industry, with visible evidence rather than generic feature cards. The hero must center the actual product surface visitors will use, not a static explanatory image. For chat products, the hero is the chat. Include only the chat elements allowed by the user's constraints; if the user says no generated result, do not show assistant output, generated artifacts, or preview updates in the hero. Do not include text-and-icon-only sections; every feature explanation needs a screenshot, demo state, generated example, comparison, workflow diagram, preview, or other meaningful visual object. The output must be a high-fidelity visual concept or real product/design asset, not a CSS/SVG/HTML-rendered placeholder mock. Use clear hierarchy, readable typography, purposeful spacing, and realistic above-the-fold composition.
 
 Every major visual object must have a visible job. If an element is present only because it looks nice, remove it. The design should make clear why the font, type size, italic/mono treatment, whitespace, section order, and CTA placement were chosen. Use type creatively where the DNA allows it; avoid default SaaS typography unless neutrality is the explicit creative choice.
+
+The craft bar is an award-winning art-directed page. Light the page deliberately, grade the colors as a set, choose real materials and textures, and resolve every component to refined detail. Do not produce a generic component-library layout with content poured in.
 
 If the user explicitly limits hero contents, obey that limit over the default demo pattern. Never add hero elements the user excluded.
 If a header is needed, place it outside and above the hero content area; do not count it as an extra hero element.
@@ -148,7 +158,7 @@ If a header is needed, place it outside and above the hero content area; do not 
 After generation:
 
 1. Name each option with a short memorable label.
-2. For each option, explain the strategy in one sentence.
+2. For each option, give the strategy in one sentence, the style world in one sentence (candidate DNA name plus its typography and palette in a few words), and the motion story in one or two sentences: hero entrance, scroll behavior, signature moment.
 3. Ask the user to choose one option or request another round.
 4. Stop. Do not build yet.
 
@@ -163,6 +173,7 @@ Pick 1, 2, or 3 as the visual target, or tell me what to remix before building.
 When the user picks an option, record:
 
 - selected option number and name
+- the candidate DNA behind the selected option; it becomes the final design DNA, so finalize its implementation notes in `design-dna.md` or the thread
 - what should be preserved
 - any requested changes
 - whether to build a static LP or a richer interactive LP
