@@ -1,15 +1,15 @@
 {
   "name": "lp-studio",
-  "version": "0.1.4+codex.20260612211710",
-  "description": "Landing-page onboarding, design DNA, visual direction, and selected-concept build workflow for Codex.",
+  "version": "0.1.5+codex.20260613121436",
+  "description": "Landing-page onboarding, design DNA, visual direction, selected-concept build, and on-page Studio editing workflow for Codex.",
   "author": {
     "name": "tt"
   },
   "skills": "./skills/",
   "interface": {
     "displayName": "LP Studio",
-    "shortDescription": "Brief, shape, explore, and build landing pages.",
-    "longDescription": "LP Studio turns a landing-page idea into a usable brief, maps the industry-specific proof the page needs, creates service-specific design DNA, generates three visual directions, waits for a chosen direction, then helps build from the selected visual target. It is a standalone LP workflow and does not modify the Product Design plugin.",
+    "shortDescription": "Brief, shape, explore, build, and visually tune landing pages.",
+    "longDescription": "LP Studio turns a landing-page idea into a usable brief, maps the industry-specific proof the page needs, creates service-specific design DNA, generates three visual directions, waits for a chosen direction, helps build from the selected visual target, then can add a gated on-page Studio mode for copy and layout polish. It is a standalone LP workflow and does not modify the Product Design plugin.",
     "developerName": "tt",
     "category": "Design",
     "capabilities": [
@@ -20,7 +20,8 @@
     "defaultPrompt": [
       "Create an LP brief, design DNA, and visual directions.",
       "Onboard this SaaS landing page idea.",
-      "Turn this brief into design DNA and three LP concepts."
+      "Turn this brief into design DNA and three LP concepts.",
+      "Add Studio mode so I can edit copy and positions on the rendered LP."
     ]
   }
 }

@@ -1,6 +1,6 @@
 ---
 name: index
-description: Route LP Studio landing-page workflows. Use when the user wants to create, plan, improve, design, visually explore, or build a landing page; onboard the LP brief; create service-specific design DNA; generate three visual directions; wait for the user to select one; then build only from the selected visual target.
+description: Route LP Studio landing-page workflows. Use when the user wants to create, plan, improve, design, visually explore, build, or visually edit a landing page; onboard the LP brief; create service-specific design DNA; generate three visual directions; wait for the user to select one; build only from the selected visual target; then optionally add a Studio-like on-page editor for copy and layout polish.
 ---
 
 # LP Studio
@@ -11,10 +11,11 @@ LP Studio is a standalone landing-page workflow. It does not modify or depend on
 
 Route requests in this order:
 
-1. If there is no usable `landing-page-brief.md` or confirmed LP brief in the thread, use [$lp-brief-onboarding](../lp-brief-onboarding/SKILL.md).
-2. If the brief is usable but there is no `design-dna.md` with three style-divergent candidate DNAs (or an explicitly confirmed single DNA), use [$design-dna](../design-dna/SKILL.md).
-3. If the brief and design DNA are usable and the user wants design exploration, visual direction, images, or "show options", use [$lp-visual-directions](../lp-visual-directions/SKILL.md).
-4. If the user has selected one generated direction, screenshot, mockup, or visual target and asks to build, use [$lp-build-selected-direction](../lp-build-selected-direction/SKILL.md).
+1. If the user has an already built LP and wants to tweak copy, wording, spacing, alignment, element positions, or asks for "studio mode", "visual editor", "edit on screen", or similar, use [$lp-edit-studio](../lp-edit-studio/SKILL.md).
+2. If there is no usable `landing-page-brief.md` or confirmed LP brief in the thread, use [$lp-brief-onboarding](../lp-brief-onboarding/SKILL.md).
+3. If the brief is usable but there is no `design-dna.md` with three style-divergent candidate DNAs (or an explicitly confirmed single DNA), use [$design-dna](../design-dna/SKILL.md).
+4. If the brief and design DNA are usable and the user wants design exploration, visual direction, images, or "show options", use [$lp-visual-directions](../lp-visual-directions/SKILL.md).
+5. If the user has selected one generated direction, screenshot, mockup, or visual target and asks to build, use [$lp-build-selected-direction](../lp-build-selected-direction/SKILL.md).
 
 ## Core Rule
 
@@ -33,8 +34,9 @@ LP idea
   -> design-dna.md (three style-divergent candidates)
   -> three visual directions (one per candidate, completely different styles)
   -> user chooses one (direction + DNA)
-  -> build selected direction (including its motion system)
+  -> build selected direction (including its motion system and optional Studio mode)
   -> verify responsive/local output and motion
+  -> optional on-page Studio editing for copy and layout polish
 ```
 
 ## Handoff Language
@@ -45,6 +47,7 @@ Keep user updates short:
 - "DNA first, then visuals."
 - "I will generate three completely different styles and stop for your pick."
 - "Now that option N is selected, I can build from that visual target."
+- "I will add Studio mode so you can adjust copy and positions on the page."
 
 ## Product Design Boundary
 

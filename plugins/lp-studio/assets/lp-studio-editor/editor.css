@@ -1,0 +1,203 @@
+.lp-studio-active {
+  --lp-studio-panel-bg: #101114;
+  --lp-studio-panel-border: rgba(255, 255, 255, 0.14);
+  --lp-studio-panel-muted: rgba(255, 255, 255, 0.62);
+  --lp-studio-panel-text: #f7f7f2;
+  --lp-studio-accent: #7dd3fc;
+}
+
+.lp-studio-panel {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 2147483000;
+  width: min(340px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+  padding: 14px;
+  color: var(--lp-studio-panel-text);
+  background: color-mix(in srgb, var(--lp-studio-panel-bg) 94%, transparent);
+  border: 1px solid var(--lp-studio-panel-border);
+  border-radius: 8px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.36);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 12px;
+  line-height: 1.35;
+  backdrop-filter: blur(16px);
+}
+
+.lp-studio-panel * {
+  box-sizing: border-box;
+  font: inherit;
+  letter-spacing: 0;
+}
+
+.lp-studio-panel__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.lp-studio-panel__title {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.lp-studio-panel__title strong {
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.lp-studio-panel__title span,
+.lp-studio-panel__status,
+.lp-studio-field label {
+  color: var(--lp-studio-panel-muted);
+}
+
+.lp-studio-panel__close,
+.lp-studio-panel button {
+  min-height: 30px;
+  color: var(--lp-studio-panel-text);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.lp-studio-panel button {
+  padding: 7px 9px;
+}
+
+.lp-studio-panel button:hover,
+.lp-studio-panel button:focus-visible {
+  background: rgba(255, 255, 255, 0.14);
+  outline: 2px solid rgba(125, 211, 252, 0.36);
+  outline-offset: 1px;
+}
+
+.lp-studio-panel button[aria-pressed="true"] {
+  color: #061016;
+  background: var(--lp-studio-accent);
+  border-color: var(--lp-studio-accent);
+}
+
+.lp-studio-panel__close {
+  display: grid;
+  flex: 0 0 30px;
+  width: 30px;
+  padding: 0;
+  place-items: center;
+}
+
+.lp-studio-field {
+  display: grid;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.lp-studio-field label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.lp-studio-panel input,
+.lp-studio-panel select,
+.lp-studio-panel textarea {
+  width: 100%;
+  color: var(--lp-studio-panel-text);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 6px;
+  outline: none;
+}
+
+.lp-studio-panel input,
+.lp-studio-panel select {
+  height: 32px;
+  padding: 0 9px;
+}
+
+.lp-studio-panel textarea {
+  min-height: 92px;
+  resize: vertical;
+  padding: 9px;
+}
+
+.lp-studio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.lp-studio-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.lp-studio-actions .lp-studio-actions__wide {
+  grid-column: 1 / -1;
+}
+
+.lp-studio-panel__status {
+  min-height: 17px;
+  margin-top: 10px;
+  font-size: 11px;
+}
+
+.lp-studio-target {
+  cursor: crosshair;
+  outline: 1px dashed rgba(125, 211, 252, 0.44);
+  outline-offset: 3px;
+}
+
+.lp-studio-target:hover {
+  outline-color: rgba(125, 211, 252, 0.9);
+}
+
+.lp-studio-selected {
+  outline: 2px solid var(--lp-studio-accent) !important;
+  outline-offset: 4px !important;
+}
+
+.lp-studio-frame {
+  position: fixed;
+  z-index: 2147482999;
+  pointer-events: none;
+  border: 1px solid var(--lp-studio-accent);
+  border-radius: 6px;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.03);
+}
+
+.lp-studio-badge {
+  position: fixed;
+  z-index: 2147482999;
+  max-width: min(280px, calc(100vw - 32px));
+  padding: 4px 7px;
+  color: #061016;
+  background: var(--lp-studio-accent);
+  border-radius: 999px;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 11px;
+  line-height: 1;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.lp-studio-moving .lp-studio-selected {
+  cursor: move;
+}
+
+@media (max-width: 720px) {
+  .lp-studio-panel {
+    inset: auto 10px 10px 10px;
+    width: auto;
+    max-height: 48vh;
+  }
+}
